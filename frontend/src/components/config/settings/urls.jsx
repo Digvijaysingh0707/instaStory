@@ -1,6 +1,6 @@
 export const endPoint = {
     url: {
-        Apiurl: "http://localhost:3001",
+        Apiurl: "https://instastory-1.onrender.com",
     },
     insta: {
         stories: "/insta/stories",
