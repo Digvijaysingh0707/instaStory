@@ -6,23 +6,24 @@ import { getStory } from "./hooks/useStory";
 import { StoryWrapper } from "../App";
 
 export default function StoriesSection() {
-  const { allStories } = useContext(StoryWrapper)
+  const { allStories, currentUserId, setCurrentUserId } = useContext(StoryWrapper)
   const [loading, setLoading] = useState(true);
   const [stories, setStories] = useState([]);
   let { userId } = useParams();
   const navigate = useNavigate();
 
-
-
   const redirectToNextStory = () => {
     const index = allStories.findIndex(obj => obj._id === userId);
+    console.log(index, 'CURRENT')
     if (index + 1 < allStories?.length) {
+      setCurrentUserId(allStories[index + 1]?._id)
       navigate("/story/" + allStories[index + 1]?._id)
     }
-    console.log(index, "INDEX")
+    else {
+      navigate("/")
+    }
 
   }
-
 
   useEffect(() => {
     const fetchData = async () => {
@@ -36,9 +37,8 @@ export default function StoriesSection() {
         setLoading(false);
       }
     }
-
     fetchData();
-  }, []);
+  }, [currentUserId]);
 
   function renderLoading() {
     return (

@@ -10,6 +10,7 @@ export const StoryWrapper = createContext()
 
 function App() {
   const [allStories, setAllStories] = useState([])
+  const [currentUserId, setCurrentUserId] = useState()
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,7 +25,7 @@ function App() {
     fetchData();
   }, []);
   return (
-    <StoryWrapper.Provider value={{ allStories }}>
+    <StoryWrapper.Provider value={{ allStories, currentUserId, setCurrentUserId }}>
       <Router>
         <Routes>
           <Route path="/story/:userId" element={<StoriesComponent />} />
