@@ -23,7 +23,7 @@ export default function Home() {
       >
         <div className="category-outer-circle bg-red rounded-full w-5 h-5 flex justify-center items-center overflow-hidden">
           <div className="category-inner-circle bg-white rounded-full flex justify-center items-center">
-            <img className="br-30" style={{ borderRadius: 30 }} src={categoryItem?.profilePic}></img>
+            <img className="rounded-[50%]" src={categoryItem?.profilePic}></img>
           </div>
         </div>
         <div className="font-bold mt-2">{categoryItem.user}</div>
@@ -33,8 +33,7 @@ export default function Home() {
 
   return (
     <div>
-      <div className="header text-white bg-gradient-to-r from-purple-500 to-pink-500 flex justify-between items-center text-3xl font-bold py-4 mb-4">
-        <img className="w-12 ml-4" src="https://cdn.pixabay.com/photo/2016/12/04/18/58/instagram-1882330_1280.png" alt="Instagram Logo"></img>
+      <div className="header text-white bg-gradient-to-r from-#ff8800 to-#ff3300 flex justify-between items-center text-3xl font-bold py-4 mb-4">
         <div
           className="cursor-pointer"
           onClick={() => setCreditsPopUpOpen(true)}
