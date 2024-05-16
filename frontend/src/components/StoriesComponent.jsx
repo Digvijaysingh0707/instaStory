@@ -14,7 +14,6 @@ export default function StoriesSection() {
 
   const redirectToNextStory = () => {
     const index = allStories.findIndex(obj => obj._id === userId);
-    console.log(index, 'CURRENT')
     if (index + 1 < allStories?.length) {
       setCurrentUserId(allStories[index + 1]?._id)
       navigate("/story/" + allStories[index + 1]?._id)

@@ -23,7 +23,6 @@ export default function Home() {
       >
         <div className="category-outer-circle bg-red rounded-full w-5 h-5 flex justify-center items-center overflow-hidden">
           <div className="category-inner-circle bg-white rounded-full flex justify-center items-center">
-            {console.log(categoryItem, 'categoryItem')}
             <img className="br-30" style={{ borderRadius: 30 }} src={categoryItem?.profilePic}></img>
           </div>
         </div>
