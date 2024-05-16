@@ -18,7 +18,7 @@ $ cd api
 ### Install dependencies
 $ npm install
 
-### Run the app
+### Run backend
 $ npm start
 
 ### Go into the frontend
@@ -27,5 +27,5 @@ $ cd frontend
 ### Install dependencies
 $ npm install
 
-### Run the app
+### Run frontend
 $ npm run dev
