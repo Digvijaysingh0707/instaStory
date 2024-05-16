@@ -7,7 +7,7 @@ import { StoryWrapper } from "../App";
 
 export default function StoriesSection() {
   const { allStories, currentUserId, setCurrentUserId } = useContext(StoryWrapper)
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [stories, setStories] = useState([]);
   let { userId } = useParams();
   const navigate = useNavigate();
@@ -63,3 +63,5 @@ export default function StoriesSection() {
     renderLoading()
   );
 }
+
+
